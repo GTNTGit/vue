@@ -65,23 +65,25 @@ const markets = [
 
 .tabs {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   margin-bottom: var(--spacing-md);
-  border-bottom: 1px solid var(--color-bg-input);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .tab-btn {
   background: none;
   border: none;
-  padding: 10px 0;
+  padding: 12px 0;
   color: var(--color-text-secondary);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   position: relative;
+  transition: color 0.2s ease;
 }
 
 .tab-btn.active {
   color: var(--color-text-primary);
+  font-weight: 600;
 }
 
 .tab-btn.active::after {
@@ -90,8 +92,9 @@ const markets = [
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: var(--color-primary);
+  border-radius: 3px 3px 0 0;
 }
 
 .list-header {
@@ -99,7 +102,8 @@ const markets = [
   justify-content: space-between;
   font-size: 12px;
   color: var(--color-text-tertiary);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  padding: 0 4px;
 }
 
 .list-header span:nth-child(1) { width: 40%; }
@@ -110,7 +114,12 @@ const markets = [
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
+  padding: 16px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.market-item:last-child {
+  border-bottom: none;
 }
 
 .name-col {
@@ -118,14 +127,14 @@ const markets = [
 }
 
 .symbol {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   color: var(--color-text-primary);
 }
 
 .pair {
   font-size: 12px;
-  color: var(--color-text-secondary);
+  color: var(--color-text-tertiary);
   margin-left: 4px;
 }
 
@@ -135,6 +144,7 @@ const markets = [
   font-weight: 600;
   font-size: 16px;
   color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
 }
 
 .change-col {
@@ -144,13 +154,14 @@ const markets = [
 }
 
 .change-btn {
-  padding: 6px 12px;
+  padding: 6px 0;
+  width: 72px;
   border-radius: 4px;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  min-width: 80px;
   text-align: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .change-btn.up {

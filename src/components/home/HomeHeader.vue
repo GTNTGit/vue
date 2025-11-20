@@ -32,10 +32,13 @@ import { Search, Bell, ScanLine } from 'lucide-vue-next'
   justify-content: space-between;
   padding: var(--spacing-md);
   gap: var(--spacing-md);
-  background: var(--color-bg-primary);
+  background: rgba(11, 14, 17, 0.85); /* Semi-transparent bg */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .user-avatar {

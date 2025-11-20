@@ -62,11 +62,26 @@ const showBalance = ref(true)
 
 <style scoped>
 .asset-card {
-  background: linear-gradient(135deg, #1c1c1e 0%, #2c2c2e 100%);
+  background: linear-gradient(135deg, #1E2329 0%, #0B0E11 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
   color: white;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.asset-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(47, 102, 246, 0.15) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .header {

@@ -36,14 +36,17 @@ const navItems = [
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px; /* Standard mobile nav height */
-  background-color: var(--color-bg-card);
-  border-top: 1px solid var(--color-border);
+  height: 70px; /* Slightly taller for better touch area */
+  background-color: rgba(21, 26, 31, 0.85); /* Semi-transparent */
+  backdrop-filter: blur(20px); /* Glassmorphism */
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 100;
   padding-bottom: env(safe-area-inset-bottom);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .nav-item {
